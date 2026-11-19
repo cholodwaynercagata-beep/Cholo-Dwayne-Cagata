@@ -1,0 +1,232 @@
+ /*GOOGLE FONTS  Headings: Montserrat Body Text: Open Sans*/
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Open+Sans:wght@400;600&display=swap');
+
+
+/* General page background */
+body {
+    font-family:  Open Sans, Arial, Helvetica, sans-serif;
+    background-color: powderblue;
+    color: #263238;
+    line-height: 1.7;
+    margin: 0;
+    padding: 0;
+}
+
+/* Center */
+main {
+    max-width: 900px;
+    width: 90%;
+    margin: 2.5rem auto;
+}
+
+/* Floating box for every section */
+main section {
+    background-color:  #ffffff;
+    padding: 2rem;
+    margin: 0 auto 2rem;
+    border: 1px solid #dce4ee;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(24, 49, 83, 0.10);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+/* Slight floating effect on hover */
+main section:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(24, 49, 83, 0.16);
+}
+  
+/*HEADINGS - MONTSERRAT*/
+
+h1,
+h2,
+h3 {
+    font-family: Montserrat, Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+/* Section headings */
+main section h2 {
+    color: #183153;
+    font-size: 1.6rem;
+    margin-top: 0;
+    margin-bottom: 1rem;
+    padding-bottom: 0.6rem;
+    border-bottom: 2px solid #5dade2;
+}
+
+/* Paragraphs */
+main section p {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+/* About Me */
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+}
+
+.about-text {
+    flex: 2;
+    min-width: 0;
+}
+
+.about-photo {
+    flex: 1;
+    min-width: 0;
+}
+
+.about-photo img {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: 400px;
+    margin: 0 auto;
+    border-radius: 30%;
+    border: 4px solid #e3edf7;
+}
+
+/* Passion project list */
+main section li {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    margin-bottom: 1rem;
+}
+
+main section li h3 {
+    color: #2874a6;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Remove horizontal lines between cards */
+main hr {
+    display: none;
+}
+
+/* Header */
+header {
+    background-color: #183153;
+    color: #ffffff;
+    text-decoration-line: underline;
+    text-decoration-color: #E6E6FA;
+    text-align: center;
+    padding: 2.5rem 1rem;
+    border-bottom: 5px solid #5dade2;
+}
+
+header h1 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 0;
+}
+
+header p {
+     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    color: #e3f2fd;
+}
+
+/* Footer */
+footer {
+    background-color: #183153;
+    color: #ffffff;
+    text-align: center;
+    padding: 2rem 1rem;
+    border-top: 5px solid #5dade2;
+}
+
+footer h2 {
+    font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+    color: #ffffff;
+}
+
+footer a {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    color: #a9dcff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Responsive design for mobile */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    main {
+        width: 92%;
+        margin: 1.5rem auto;
+    }
+
+    main section {
+        padding: 1.25rem;
+        margin-bottom: 1.5rem;
+        border-radius: 12px;
+    }
+
+    main section h2 {
+        font-size: 1.35rem;
+    }
+
+    .about-container {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 1rem;
+    }
+
+    .about-photo img {
+        max-width: 100%;
+    }
+}
+
+/* Passion Projects Side-by-Side Layout */
+.project-item {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-bottom: 2rem;
+    list-style: none;
+}
+
+.project-text {
+    flex: 1;
+}
+
+.project-media {
+    flex: 1;
+    min-width: 0;
+}
+
+.project-media img,
+.project-media video {
+    display: block;
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 12px;
+    border: 3px solid #e3edf7;
+}
+
+/* Mobile Layout */
+@media (max-width: 600px) {
+    .project-item {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .project-media img,
+    .project-media video {
+        height: auto;
+        max-height: 300px;
+    }
+}
